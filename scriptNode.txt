@@ -1,3 +1,30 @@
 1.Tạo 1 dự án node: npm init 
     1.1 git sau đó dán link dô, ở đây có link git cho nodejs_blog: https://github.com/NguyenThiTuongVyB1809543/nodejs_blog.git
 2. Tạo ra thư mục index.js song song với package.json
+3. Cài thư viện express npm install  express
+4. Cài nodemon : npm install nodemon --save-dev
+5. Vào package.json paste cái này vào bên trên "test": "echo \"Error: no test specified\" && exit 1"     :     "start": "nodemon --inspect index.js "
+6. Để chạy npm start
+7. Cài morgan: npm install morgan --save-dev
+    Sữ dụng morgan: const morgan = require('morgan') vào index.js
+8. Cài express handlebars: npm i express-handlebars
+8. Tạo ra .gitignore với nội dung: node_modules/ , để bỏ lại node_modules/ khi push code lên git
+9. push code lên git
+…or create a new repository on the command line
+echo "# nodejs_blog" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/NguyenThiTuongVyB1809543/nodejs_blog.git
+git push -u origin main
+…or push an existing repository from the command line
+git remote add origin https://github.com/NguyenThiTuongVyB1809543/nodejs_blog.git
+git branch -M main
+git push -u origin main
+
+
+10. Cấu trúc lại thư mục: 
+    1. Tạo ra thưu mục: blog/src
+    2. Di chuyển index.js vào blog/src 
+    3. Sửa trong file package.json: "main": "src/index.js" và "start": "nodemon --inspect src/index.js ",
