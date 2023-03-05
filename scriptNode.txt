@@ -28,3 +28,23 @@ git push -u origin main
     1. Tạo ra thưu mục: blog/src
     2. Di chuyển index.js vào blog/src 
     3. Sửa trong file package.json: "main": "src/index.js" và "start": "nodemon --inspect src/index.js ",
+
+.gitignore: để loại bỏ những file của git
+nodemon.json: để config về những cái đuôi file nào mà thay đổi thì restart lại server 
+package.json: Khai báo những script, cài đặt những sự phụ thuộc
+
+/src: viết tắt của từ source chúng ta sẽ viết mội code của chúng ta trong này
+    /public: nó sẽ quản lí những file tỉnh của chúng ta (css, js, img, font....)
+        /css:
+        /img:
+    /resources: Nó sẽ ở cấp cao hơn public
+        /scss: giúp tích hợp css processer để viết css nhanh hơn
+        /views: nó sẽ phục vụ cho việc render ra view của ứng dụng nodejs
+            nó đang sữ dugnj thư viện handlebars nên là nó cung cấp cái cơ chế quản lí về layouts, partials 
+            cũng như là tự động load layout
+    /index.js:
+
+
+Chạy web server của nodejs: npm start
+Lắng nghe sự thay đổi của file scss: npm run watch
+
