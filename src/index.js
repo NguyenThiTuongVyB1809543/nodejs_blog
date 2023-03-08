@@ -2,10 +2,13 @@ const path = require('path');
 const express = require('express');
 const morgan = require('morgan');
 const handlebars = require('express-handlebars');
+const route = require('./routes'); //gõ thư mục thì nó sẽ tự động nạp file index
+const db = require ('./config/db');
 const app = express();
 const port = 3000;
 
-const route = require('./routes'); //gõ thư mục thì nó sẽ tự động nạp file index
+//Connect to DB
+db.connect();
 
 app.use(express.static(path.join(__dirname, 'public')));
 //HTTP logger
