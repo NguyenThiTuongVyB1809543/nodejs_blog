@@ -13,14 +13,14 @@ app.use(morgan('combined'));
 //Template engine
 // app.engine('handlebars' handlebars()) ^ typeerror handlebars is not a function
 app.engine(
-                    'hbs',
+    'hbs',
     handlebars.engine({
-                        defaultLayout: 'main',
-                extname: '.hbs',
+        defaultLayout: 'main',
+        extname: '.hbs',
     }),
 );
-        app.set('view engine', 'hbs');
-                    app.set('views', path.join(__dirname, 'resources/views'));
+app.set('view engine', 'hbs');
+app.set('views', path.join(__dirname, 'resources/views'));
 
 //Home, Search, contact.... là những trang không nằm ở những tài nguyên cụ thể -> cho vào siteController
 
