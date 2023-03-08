@@ -1,7 +1,7 @@
 const newsRouter = require('./news');
 const siteRouter = require('./site');
 
-function route(app){
+function route(app) {
     // app.get('/', (req, res) => {
     //     res.render('home');//render home thì nó lấy home.handlebars nó đưa vào {{{body}}} ở trang D:\nodejs\blog\src\resources\views\layouts\main.handlebars
     // })
@@ -14,9 +14,6 @@ function route(app){
     // app.use('/search', siteRouter);
     app.use('/news', newsRouter);
     app.use('/', siteRouter);
-  
-     
-   
 }
 
 module.exports = route;
